@@ -2,12 +2,11 @@
     "name": "dnsoft/module-dashboard",
     "description": "Module Dashboard",
     "keywords": [
-        "newnet",
-        "catalog",
+        "dnsoft",
         "module",
-        "product"
+        "dashboard"
     ],
-    "homepage": "https://newnet.vn",
+    "homepage": "https://dnguyen.xyz",
     "support" : {
         "email" : "support@dnsoft.vn"
     },
@@ -20,7 +19,7 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Modules\\Catalog\\": "/src"
+            "Modules\\Dashboard\\": "/src"
         }
     },
     "extra": {
@@ -28,6 +27,9 @@
             "providers": [
                 "Modules\\Dashboard\\DashboardServiceProvider"
             ]
+        },
+        "aliases": {
+            "Dashboard": "Modules\\Dashboard\\Facades\\Dashboard"
         }
     },
     "minimum-stability": "dev",

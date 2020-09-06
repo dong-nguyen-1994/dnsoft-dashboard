@@ -1,6 +1,6 @@
 <?php
 
-namespace Dnsoft\Dashboard\Http\Controllers\Admin;
+namespace Modules\Dashboard\Http\Controllers\Admin;
 
 use Illuminate\Routing\Controller;
 use Modules\Dashboard\Repositories\DashboardRepositoryInterface;
