@@ -1,0 +1,8 @@
+{
+    "name": "Dashboard",
+    "namespace": "Modules\\Dashboard\\",
+    "description": "This is module dashboard",
+    "providers": [
+        "Modules\\Dashboard\\DashboardServiceProvider"
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "name": "dnsoft/module-dashboard",
+    "description": "Module Dashboard",
+    "keywords": [
+        "newnet",
+        "catalog",
+        "module",
+        "product"
+    ],
+    "homepage": "https://newnet.vn",
+    "support" : {
+        "email" : "support@dnsoft.vn"
+    },
+    "authors": [
+        {
+            "name": "Dong Nguyen",
+            "email": "dong.joseph2810@gmail.com"
+        }
+    ],
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Catalog\\": "/src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Dashboard\\DashboardServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
