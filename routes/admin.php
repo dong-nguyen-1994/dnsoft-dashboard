@@ -7,7 +7,4 @@ Route::prefix(config('core.admin_prefix'))->middleware(['web', 'admin.auth'])->g
     Route::get('dashboard/setting',  [DashboardController::class, 'setting'])->name('admin.dashboard.setting');
     Route::post('dashboard/save', [DashboardController::class, 'save'])->name('admin.dashboard.save');
 
-    Route::get('/test-dashboard', function () {
-        return view('core::main-test');
-    });
 });

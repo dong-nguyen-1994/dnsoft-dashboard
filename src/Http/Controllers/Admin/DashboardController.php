@@ -19,6 +19,17 @@ class DashboardController extends Controller
 
     public function index()
     {
+
         return view('dashboard::admin.index');
+    }
+
+    public function setting()
+    {
+        return view('dashboard::admin.setting');
+    }
+
+    public function save()
+    {
+
     }
 }

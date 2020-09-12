@@ -23,7 +23,7 @@ class DashboardServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../public' => public_path('vendor/dnsoft/dashboard'),
-        ], 'dnsoft');
+        ], 'dashboard');
 
 
         $this->app->singleton(DashboardRepositoryInterface::class, function () {
