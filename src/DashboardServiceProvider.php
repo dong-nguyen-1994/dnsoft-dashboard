@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\Dashboard;
+namespace Module\Dashboard;
 
 use Illuminate\Support\ServiceProvider;
-use Modules\Dashboard\Models\Dashboard;
-use Modules\Dashboard\Repositories\DashboardRepositoryInterface;
-use Modules\Dashboard\Repositories\Eloquents\DashboardRepository;
+use Module\Dashboard\Models\Dashboard;
+use Module\Dashboard\Repositories\DashboardRepositoryInterface;
+use Module\Dashboard\Repositories\Eloquents\DashboardRepository;
 
 class DashboardServiceProvider extends ServiceProvider
 {

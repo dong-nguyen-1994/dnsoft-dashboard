@@ -1,6 +1,6 @@
 <?php
 
-use Modules\Dashboard\Http\Controllers\Admin\DashboardController;
+use Module\Dashboard\Http\Controllers\Admin\DashboardController;
 
 Route::prefix(config('core.admin_prefix'))->middleware(['web', 'admin.auth'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard.index');

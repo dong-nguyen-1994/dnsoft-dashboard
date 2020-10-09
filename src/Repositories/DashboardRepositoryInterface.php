@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Dashboard\Repositories;
+namespace Module\Dashboard\Repositories;
 
 use Dnsoft\Core\Repositories\BaseRepositoryInterface;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Dashboard;
+namespace Module\Dashboard;
 
 interface DashboardInterface
 {

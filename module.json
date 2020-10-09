@@ -1,8 +1,8 @@
 {
     "name": "Dashboard",
-    "namespace": "Modules\\Dashboard\\",
+    "namespace": "Module\\Dashboard\\",
     "description": "This is module dashboard",
     "providers": [
-        "Modules\\Dashboard\\DashboardServiceProvider"
+        "Module\\Dashboard\\DashboardServiceProvider"
     ]
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Modules\Dashboard\Dashboards;
+namespace Module\Dashboard\Dashboards;
 
-use Modules\Dashboard\DashboardItem;
+use Module\Dashboard\DashboardItem;
 
 class WelcomeDashboard extends DashboardItem
 {

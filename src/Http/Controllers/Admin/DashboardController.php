@@ -1,9 +1,9 @@
 <?php
 
-namespace Modules\Dashboard\Http\Controllers\Admin;
+namespace Module\Dashboard\Http\Controllers\Admin;
 
 use Illuminate\Routing\Controller;
-use Modules\Dashboard\Repositories\DashboardRepositoryInterface;
+use Module\Dashboard\Repositories\DashboardRepositoryInterface;
 
 class DashboardController extends Controller
 {

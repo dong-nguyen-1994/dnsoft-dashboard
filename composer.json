@@ -19,17 +19,17 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Modules\\Dashboard\\": "/src"
+            "Module\\Dashboard\\": "/src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Modules\\Dashboard\\DashboardServiceProvider"
+                "Module\\Dashboard\\DashboardServiceProvider"
             ]
         },
         "aliases": {
-            "Dashboard": "Modules\\Dashboard\\Facades\\Dashboard"
+            "Dashboard": "Module\\Dashboard\\Facades\\Dashboard"
         }
     },
     "minimum-stability": "dev",

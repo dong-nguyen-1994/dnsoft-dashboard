@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Dashboard;
+namespace Module\Dashboard;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Htmlable;
