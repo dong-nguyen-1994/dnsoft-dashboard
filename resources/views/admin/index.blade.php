@@ -17,11 +17,15 @@
         @endforeach
     </div>
 @stop
-@push('scripts')
-    <script>
-        toastr.options.closeDuration = 300;
-        toastr.success('Đăng nhập thành công!', {
-            timeOut: 5
-        });
-    </script>
-@endpush
+
+@if (session()->has('admin_login'))
+    @push('scripts')
+        <script>
+            toastr.options.closeDuration = 300;
+            toastr.success('Đăng nhập thành công!', {
+                timeOut: 5
+            });
+        </script>
+    @endpush
+    @php(session()->forget('admin_login'))
+@endif
