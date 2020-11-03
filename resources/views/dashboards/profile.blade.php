@@ -7,6 +7,7 @@
                 <h2 class="fs-23 font-weight-600 mb-2">
                     {{ __('dashboard::message.welcome') }} {{ auth('admin')->user()->name }},
                 </h2>
+                <br>
                 <p class="text-muted">
                     {{ \Illuminate\Foundation\Inspiring::quote() }}
                 </p>

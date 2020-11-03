@@ -18,7 +18,6 @@
     </div>
 @stop
 @push('scripts')
-
     <script>
         toastr.options.closeDuration = 300;
         toastr.success('Đăng nhập thành công!', {
