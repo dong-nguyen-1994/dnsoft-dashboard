@@ -2,6 +2,7 @@
 
 namespace Module\Dashboard\Http\Controllers\Admin;
 
+use Module\Dashboard\Facades\Dashboard;
 use Illuminate\Routing\Controller;
 use Module\Dashboard\Repositories\DashboardRepositoryInterface;
 
@@ -19,8 +20,13 @@ class DashboardController extends Controller
 
     public function index()
     {
+        $myItems = $this->dashboardRepository->myDashboard()->pluck('class_name')->toArray();
 
-        return view('dashboard::admin.index');
+        $myItems = $myItems ?: Dashboard::onlyCanAccess()->keys()->toArray();
+
+        $myDashboard = Dashboard::only($myItems);
+
+        return view('dashboard::admin.index', compact('myDashboard'));
     }
 
     public function setting()

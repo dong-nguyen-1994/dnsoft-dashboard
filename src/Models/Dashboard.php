@@ -12,4 +12,9 @@ class Dashboard extends Model
         'class_name',
         'sort_order',
     ];
+
+    public function author()
+    {
+        return $this->morphTo();
+    }
 }

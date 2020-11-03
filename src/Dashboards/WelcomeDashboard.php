@@ -6,6 +6,10 @@ use Module\Dashboard\DashboardItem;
 
 class WelcomeDashboard extends DashboardItem
 {
+    public function col()
+    {
+        return 4;
+    }
 
     public function name()
     {

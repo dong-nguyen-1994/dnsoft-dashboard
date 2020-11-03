@@ -6,6 +6,11 @@ use Module\Dashboard\DashboardItem;
 
 class ProfileDashboard extends DashboardItem
 {
+    public function col()
+    {
+        return 4;
+    }
+
     public function name()
     {
         return 'Profile';
@@ -13,6 +18,6 @@ class ProfileDashboard extends DashboardItem
 
     public function toHtml()
     {
-        return view('dashboard::dashboard.profile');
+        return view('dashboard::dashboards.profile');
     }
 }

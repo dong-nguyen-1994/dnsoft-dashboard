@@ -48,4 +48,24 @@ class DashboardManager
             }
         }
     }
+
+    public function onlyCanAccess()
+    {
+        $this->load();
+
+        return $this->collections->filter(function (DashboardInterface $item) {
+            return !$item->permission() || admin_can($item->permission());
+        });
+    }
+
+    public function only($keys)
+    {
+        $this->load();
+
+        return $this->collections
+            ->only($keys)
+            ->sortBy(function ($model) use ($keys) {
+                return array_search($model->id(), $keys);
+            });
+    }
 }

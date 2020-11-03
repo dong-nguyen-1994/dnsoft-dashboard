@@ -8,6 +8,9 @@ use Illuminate\Support\ServiceProvider;
 use Module\Dashboard\Models\Dashboard;
 use Module\Dashboard\Repositories\DashboardRepositoryInterface;
 use Module\Dashboard\Repositories\Eloquents\DashboardRepository;
+use Module\Dashboard\Dashboards\WelcomeDashboard;
+use Module\Dashboard\Dashboards\ProfileDashboard;
+use Module\Dashboard\Facades\Dashboard as DashboardFC;
 
 class DashboardServiceProvider extends ServiceProvider
 {
@@ -27,7 +30,6 @@ class DashboardServiceProvider extends ServiceProvider
             __DIR__.'/../public' => public_path('vendor/dnsoft/dashboard'),
         ], 'dashboard');
 
-
         $this->app->singleton(DashboardRepositoryInterface::class, function () {
             return new DashboardRepository(new Dashboard());
         });
@@ -37,13 +39,20 @@ class DashboardServiceProvider extends ServiceProvider
         });
 
         $this->registerAdminMennu();
+        $this->registerDashboard();
     }
 
     public function registerAdminMennu()
     {
         Event::listen(CoreAdminMenuRegistered::class, function ($menu) {
-            $menu->add(__('dashboard::dashboard.menu.dashboard'), ['url'  => 'admin'])->data('order', 1000)->prepend('<i class="fas fa-igloo"></i>');
+            $menu->add(__('dashboard::message.menu.dashboard'), ['url'  => 'admin'])->data('order', 1000)->prepend('<i class="fas fa-igloo"></i>');
         });
+    }
+
+    protected function registerDashboard()
+    {
+        DashboardFC::push(ProfileDashboard::class);
+        DashboardFC::push(WelcomeDashboard::class);
     }
 
 }
