@@ -27,7 +27,7 @@ class DashboardServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         $this->publishes([
-            __DIR__.'/../public' => public_path('vendor/dnsoft/dashboard'),
+            __DIR__.'/../public' => public_path('vendor/dashboard'),
         ], 'dashboard');
 
         $this->app->singleton(DashboardRepositoryInterface::class, function () {
