@@ -14,7 +14,7 @@ use Module\Dashboard\Facades\Dashboard as DashboardFC;
 
 class DashboardServiceProvider extends ServiceProvider
 {
-    public function getModuleNamespace()
+    public function getModuleNamespace(): string
     {
         return 'dashboard';
     }
