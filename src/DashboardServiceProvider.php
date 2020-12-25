@@ -38,11 +38,11 @@ class DashboardServiceProvider extends ServiceProvider
             return new DashboardManager();
         });
 
-        $this->registerAdminMennu();
+        $this->registerAdminMenu();
         $this->registerDashboard();
     }
 
-    public function registerAdminMennu()
+    public function registerAdminMenu()
     {
         Event::listen(CoreAdminMenuRegistered::class, function ($menu) {
             $menu->add(__('dashboard::message.menu.dashboard'), ['url'  => 'admin'])->data('order', 1000)->prepend('<i class="fas fa-igloo"></i>');
@@ -54,5 +54,4 @@ class DashboardServiceProvider extends ServiceProvider
         DashboardFC::push(ProfileDashboard::class);
         DashboardFC::push(WelcomeDashboard::class);
     }
-
 }
