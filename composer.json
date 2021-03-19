@@ -31,7 +31,5 @@
         "aliases": {
             "Dashboard": "Module\\Dashboard\\Facades\\Dashboard"
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
