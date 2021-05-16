@@ -13,7 +13,7 @@
         @foreach($myDashboard as $dashboard)
             <div class="col-md-{{ $dashboard->col() }} mb-4">
                 @if ($dashboard->name() == 'Profile')
-                    @if (config('dashboard.is_display_welcome'))
+                    @if (config('dashboard.is_display_profile'))
                         {{ $dashboard }}
                     @endif
                 @endif
