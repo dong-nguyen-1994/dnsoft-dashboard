@@ -22,7 +22,7 @@
                         {{ $dashboard }}
                     @endif
                 @endif
-                @if ($dashboard->name() !== 'Profile' && $dashboard->name() !== 'Profile')
+                @if ($dashboard->name() !== 'Welcome' && $dashboard->name() !== 'Profile')
                     {{ $dashboard }}
                 @endif
             </div>
