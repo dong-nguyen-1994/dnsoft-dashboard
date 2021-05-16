@@ -12,7 +12,19 @@
     <div class="row">
         @foreach($myDashboard as $dashboard)
             <div class="col-md-{{ $dashboard->col() }} mb-4">
-                {{ $dashboard }}
+                @if ($dashboard->name() == 'Profile')
+                    @if (config('dashboard.is_display_welcome'))
+                        {{ $dashboard }}
+                    @endif
+                @endif
+                @if ($dashboard->name() == 'Welcome')
+                    @if (config('dashboard.is_display_welcome'))
+                        {{ $dashboard }}
+                    @endif
+                @endif
+                @if ($dashboard->name() !== 'Profile' && $dashboard->name() !== 'Profile')
+                    {{ $dashboard }}
+                @endif
             </div>
         @endforeach
     </div>

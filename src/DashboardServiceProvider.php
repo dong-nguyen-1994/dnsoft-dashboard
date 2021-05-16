@@ -24,11 +24,16 @@ class DashboardServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/../routes/admin.php');
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'dashboard');
         $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'dashboard');
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
         $this->publishes([
-            __DIR__.'/../public' => public_path('vendor/dashboard'),
+            __DIR__ . '/../public' => public_path('vendor/dashboard'),
         ], 'dashboard');
+
+        $this->publishes([
+            __DIR__ . '/../config/dashboard.php' => config_path('dashboard.php'),
+        ], 'dashboard-config');
+
 
         $this->app->singleton(DashboardRepositoryInterface::class, function () {
             return new DashboardRepository(new Dashboard());
@@ -40,6 +45,12 @@ class DashboardServiceProvider extends ServiceProvider
 
         $this->registerAdminMenu();
         $this->registerDashboard();
+    }
+
+    public function register()
+    {
+        parent::register();
+        $this->mergeConfigFrom(realpath(__DIR__ . '/../config/dashboard.php'), 'dashboard');
     }
 
     public function registerAdminMenu()
