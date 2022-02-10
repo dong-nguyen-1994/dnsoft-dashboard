@@ -31,6 +31,10 @@ class DashboardServiceProvider extends ServiceProvider
         ], 'dashboard');
 
         $this->publishes([
+            __DIR__.'/../resources/views' => resource_path('views/vendor/dashboard'),
+        ], 'dashboard-view');
+
+        $this->publishes([
             __DIR__ . '/../config/dashboard.php' => config_path('dashboard.php'),
         ], 'dashboard-config');
 
@@ -56,7 +60,7 @@ class DashboardServiceProvider extends ServiceProvider
     public function registerAdminMenu()
     {
         Event::listen(CoreAdminMenuRegistered::class, function ($menu) {
-            $menu->add(__('dashboard::message.menu.dashboard'), ['url'  => 'admin', 'style' => 'width: 140px'])->data('order', 1000)->prepend('<i class="fas fa-igloo"></i>');
+            $menu->add(__('dashboard::message.menu.dashboard'), ['url'  => 'admin', 'style' => 'width: 140px'])->data('order', 1000)->prepend('<i class="metismenu-icon pe-7s-diamond"></i>');
         });
     }
 

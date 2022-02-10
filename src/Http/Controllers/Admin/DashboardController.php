@@ -26,12 +26,12 @@ class DashboardController extends Controller
 
         $myDashboard = Dashboard::only($myItems);
 
-        return view('dashboard::admin.index', compact('myDashboard'));
+        return view('dashboard::admin2.index', compact('myDashboard'));
     }
 
     public function setting()
     {
-        return view('dashboard::admin.setting');
+        return view('dashboard::admin2.setting');
     }
 
     public function save()
