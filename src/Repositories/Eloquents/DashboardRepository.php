@@ -2,8 +2,8 @@
 
 namespace Module\Dashboard\Repositories\Eloquents;
 
-use Dnsoft\Acl\Models\Admin;
-use Dnsoft\Core\Repositories\BaseRepository;
+use DnSoft\Acl\Models\Admin;
+use DnSoft\Core\Repositories\BaseRepository;
 use Module\Dashboard\Repositories\DashboardRepositoryInterface;
 
 class DashboardRepository extends BaseRepository implements DashboardRepositoryInterface

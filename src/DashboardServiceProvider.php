@@ -2,7 +2,7 @@
 
 namespace Module\Dashboard;
 
-use Dnsoft\Core\Events\CoreAdminMenuRegistered;
+use DnSoft\Core\Events\CoreAdminMenuRegistered;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 use Module\Dashboard\Models\Dashboard;
