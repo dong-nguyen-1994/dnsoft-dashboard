@@ -18,6 +18,7 @@ class ProfileDashboard extends DashboardItem
 
     public function toHtml()
     {
-        return view('dashboard::dashboards.profile');
+        $version = get_version_actived();
+        return view("dashboard::$version.dashboards.profile");
     }
 }
