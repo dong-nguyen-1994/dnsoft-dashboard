@@ -58,7 +58,7 @@ class DashboardServiceProvider extends ServiceProvider
       $menu->add(__('dashboard::message.menu.dashboard'), [
         'url'  => 'admin',
         'style' => 'width: 140px'
-      ])->data('order', 1000)->data('icon', 'fa fa-home');
+      ])->data('order', 1000)->data('icon', 'fa fa-home')->prepend('<i class="fas fa-igloo"></i>');
     });
   }
 
