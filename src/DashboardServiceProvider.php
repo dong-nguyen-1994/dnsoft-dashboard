@@ -55,10 +55,13 @@ class DashboardServiceProvider extends ServiceProvider
   public function registerAdminMenu()
   {
     Event::listen(CoreAdminMenuRegistered::class, function ($menu) {
-      $menu->add(__('dashboard::message.menu.dashboard'), [
+      $menuDashboard = $menu->add(__('dashboard::message.menu.dashboard'), [
         'url'  => 'admin',
         'style' => 'width: 140px'
-      ])->data('order', 1000)->data('icon', 'fa fa-home')->prepend('<i class="fas fa-igloo"></i>');
+      ])->data('order', 1000)->data('icon', 'fa fa-home');
+      if (!get_setting_value_by_name('disable_mega_menu')) {
+        $menuDashboard->prepend('<i class="fas fa-igloo"></i>');
+      }
     });
   }
 
