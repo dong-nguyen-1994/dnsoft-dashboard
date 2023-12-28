@@ -27,12 +27,11 @@ class DashboardServiceProvider extends ServiceProvider
 
     $this->publishes([
       __DIR__ . '/../public' => public_path('vendor/dashboard'),
-    ], 'dashboard');
+    ], 'dashboard-asset');
 
     $this->publishes([
       __DIR__ . '/../config/dashboard.php' => config_path('dashboard.php'),
     ], 'dashboard-config');
-
 
     $this->app->singleton(DashboardRepositoryInterface::class, function () {
       return new DashboardRepository(new Dashboard());
