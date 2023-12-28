@@ -25,14 +25,12 @@ class DashboardController extends Controller
         $myItems = $myItems ?: Dashboard::onlyCanAccess()->keys()->toArray();
 
         $myDashboard = Dashboard::only($myItems);
-        $version = get_version_actived();
-        return view("dashboard::$version.admin.index", compact('myDashboard'));
+        return view("dashboard::admin.index", compact('myDashboard'));
     }
 
     public function setting()
     {
-        $version = get_version_actived();
-        return view("dashboard::$version.admin.setting");
+        return view("dashboard::admin.setting");
     }
 
     public function save()
